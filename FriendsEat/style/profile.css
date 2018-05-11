@@ -1,0 +1,199 @@
+header {
+  background-image: url(http://renespoints.boardingarea.com/wp-content/uploads/2014/08/nutritional-header-heroB.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: black;
+  height: 200px;
+  margin-top: 20px;
+}
+
+
+@media (max-width:800px) {
+  header {
+    height: 150px;
+  }
+
+}
+
+
+.left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.photo {
+  width: 200px;
+  height: 200px;
+  margin-top: -120px;
+  border-radius: 100px;
+  border: 4px solid black;
+}
+
+
+.profileName {
+  margin-top: 20px;
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-size: 18pt;
+  color: white;
+}
+
+.info {
+  margin-top: -5px;
+  margin-bottom: 5px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11pt;
+  color: white;
+}
+
+.stats {
+  margin-top: 25px;
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+.number-stat {
+  padding: 0px;
+  font-size: 14pt;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+
+.desc-stat {
+  margin-top: -15px;
+  font-size: 10pt;
+  color: white;
+}
+
+.desc {
+  text-align: center;
+  margin-top: 25px;
+  margin: 25px 40px;
+  color: white;
+  font-size: 11pt;
+  font-family: "Open Sans";
+  padding-bottom: 25px;
+  border-bottom: 1px solid #ededed;
+}
+
+
+
+.right {
+  padding: 0 25px 0 25px;
+}
+
+.nav {
+  display: inline-flex;
+}
+
+.nav li {
+  margin: 40px 30px 0 10px;
+  cursor: pointer;
+  font-size: 13pt;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  color: black;
+}
+
+.nav li:hover{
+  color: white;
+}
+
+#reviewsBtn, #friendsBtn:focus, #requestsBtn:focus{
+  outline: 0;
+  color: white;
+}
+
+.follow {
+  position: absolute;
+  right: 5%;
+  top: 35px;
+  font-size: 11pt;
+  background-color: black;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 15px;
+}
+
+.follow:hover {
+  box-shadow: 0 0 15px rgba(0,0,0,0.2), 0 0 15px rgba(0,0,0,0.2);
+}
+
+#friends, #friendRequests{
+  display:grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 25% 25% 25% 25%;
+  max-height: 100%;
+}
+
+
+.profile_pic{
+  height: 80%;
+  width: 100%;
+  margin: 7px;
+  border-radius: 100px;
+}
+
+.friendElm, .requestsElm{
+  display: grid;
+  grid-template-columns: 20% 70% 10%;
+  border: solid black 2px;
+  background-color: grey;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.details{
+  margin: auto;
+  text-align: center;
+}
+
+.container{
+  height: 100%;
+}
+
+@media (max-width:990px) {
+  .nav li{
+    margin: 0px 0px 10px 20px;
+    display: inline-block;
+  }
+  ul{
+    text-align: center;
+  }
+
+  .container{
+    overflow-y: auto;
+  }
+
+  .follow {
+    width: 50%;
+    margin-left: 25%;
+    display: block;
+    position: unset;
+    text-align: center;
+  }
+
+
+  .friendElm, .requestsElm{
+    display:grid;
+    grid-column: 1/ span 3;
+    width: 100%;
+    margin: 10px 0px 10px 0px;
+  }
+}
+
+.profilePages{
+  margin-top: 20px;
+}
+
+.requestAction{
+  margin: 10px 10px 10px 0px;
+}

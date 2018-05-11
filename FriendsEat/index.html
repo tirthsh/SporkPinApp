@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no user-scalable=0" >
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style/reaction.css" />
+    <link rel="stylesheet" type="text/css" href="style/form.css" />
+    <link rel="stylesheet" type="text/css" href="style/photogrid.css" />
+    <link rel="stylesheet" type="text/css" href="style/reviews.css" />
+    <link rel="stylesheet" type="text/css" href="style/main.css" />
+    <link rel="stylesheet" type="text/css" href="style/style.css" />
+    <title>SporkPin</title>
+</head>
+
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="" href="index.html">
+                <img alt="FriendsEat" src="media/logo_icon.png" class="logo" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home
+                <span class="sr-only">(current)</span>
+              </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="credits.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link hidden" id="friendsTab" href="profile.html">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="signin" href="#">Sign In</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link hidden" id="signout" href="/signout/">Sign Out</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Modals for signin, signup -->
+    <div class="modal" id="signinModal">
+        <form class="complex_form" id="login_form">
+            <div class="alert"></div>
+            <input type="text" name="username" class="form_element" placeholder="Username" required/>
+            <input type="password" name="password" class="form_element" placeholder="Password" required/>
+
+            <button id="signin-button" name="action" class="btn">  Sign in and Explore </button>
+            <p class="message">Not registered? <a id="signup_toggle" href="#">Create an account</a></p>
+        </form>
+
+        <form class="complex_form hidden" id="signup_form">
+            <input type="text" name="email" class="form_element" placeholder="Email Address" required/>
+            <input type="text" name="username" class="form_element" placeholder="Username" required/>
+            <input type="password" name="password" class="form_element" placeholder="Password" required/>
+
+            <input type="text" name="city" class="form_element" placeholder="City - Provide better search results" required/>
+            <input type="text" name="bio" class="form_element" placeholder="Bio" />
+            <input type="file" name="picture" class="form_element" placeholder="Profile Pic" accept="image/*" required/>
+
+            <button id="signup-button" type="button" name="action" class="btn">Create Account</button>
+            <p class="message">Already registered? <a id="signin_toggle" href="#">Sign In</a></p>
+        </form>
+    </div>
+
+    <!-- Modal for adding reviews on the main page -->
+    <div class="modal hidden" id="addReviewModal">
+        <form class="complex_form" id="review_form">
+            <input type="text" name="content" class="form_element" id="content" placeholder="Comment" required/>
+            <button id="submitReview" name="action" class="btn" data-dismiss="modal">Submit</button>
+        </form>
+    </div>
+
+
+    <div class="col-md-12">
+        <div class="row">
+            <!-- comments section on main page -->
+            <div class="comments col-md-3 no-float">
+                <div class="sideBar header" id="restaurant_name">Reviews</div>
+                <div class="reviewSubHeader hidden" id="header">
+                    <a id="previous">Prev</a>
+                    <a>
+                        <a id="next">Next</a>
+                </div>
+                <div id="allReviews">
+                </div>
+                <button class="btn btn-block hidden" id="addReview">Add Review</button>
+            </div>
+
+            <!-- map section on main page -->
+            <div class="center col-md-6 no-float">
+                <div class="mapContainer">
+                    <!-- Code from CodeMyUi-->
+                    <div class="search-wrapper">
+                        <input id="pac-input" class="controls search-input" type="text" placeholder="Search Box">
+                        <button class="search-icon" id="search"> <img class="searchimg" src="media/tool.png"/></button>
+                    </div>
+                    <!-- Code Snippet Ends -->
+                    <div class="googleMap" id="map"></div>
+                </div>
+            </div>
+
+            <!-- picture feed section on main page -->
+            <div class="newsfeed col-md-3 no-float">
+                <div class="sideBar" id="pics">Picture Feed</div>
+                <div class="reviewSubHeader hidden" id="header">
+                    <a id="previous">Prev</a>
+                    <a>
+                        <a id="next">Next</a>
+                </div>
+                <div class="instagramGrid hidden" id="grid">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- javascript files -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC53IAuc_uNiWXl1jHt0UhjJnDgbWfFMbk&libraries=places"></script>
+    <script type="text/javascript" src="js/modal.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/api.js"></script>
+    <script type="text/javascript" src="js/map.js"></script>
+</body>
+
+</html>

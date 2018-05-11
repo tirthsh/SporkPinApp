@@ -1,0 +1,144 @@
+.logo {
+    width: 250px;
+    height: 90px;
+    padding: 10px;
+}
+
+body {
+    padding-top: 106px;
+    background-image: url("../media/background.png");
+    width: 100%;
+}
+
+html, .col-md-12{
+    margin:auto;
+}
+
+html,body,.col-md-12,.row {
+    height: 100%;
+    opacity: 0.95;
+}
+
+.comments {
+    height: 100%;
+}
+
+.navbar {
+    background-color: #212529;
+}
+
+.sideBar {
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #BD1729;
+    text-align: center;
+    margin: 10px 0px 10px 0px;
+    border-radius: 150px;
+}
+
+
+/*Snippet from CodeMyUi--https://codemyui.com/search-icon-search-box-animation/*/
+
+.search-wrapper {
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+    width: 70%;
+    border-radius: 40px;
+    background: black;
+    margin: auto;
+    margin-top: 80px;
+    margin-bottom: 50px;
+}
+
+.search-wrapper .search-input {
+    width: 95%;
+    height: 30px;
+    padding: 0px 70px 0 20px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: transparent;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    font-family: "Open Sans", Arial, Verdana;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #FFF;
+}
+
+.search-wrapper .search-icon {
+    width: 50px;
+    height: 35px;
+    margin: 7px 10px 0px 10px;
+    border-radius: 30px;
+    background: #FFF;
+    padding: -5px;
+    position: relative;
+    float: right;
+}
+
+/*Snippet ends*/
+
+.mapContainer {
+    height: 65%;
+    width: 100%;
+}
+
+#map{
+  height: 100%;
+  border-radius: 20px;
+  border-style: solid;
+  border-width: medium;
+  border-color: black;
+  background-image: url("../media/giphy.gif");
+  background-repeat:no-repeat;
+  background-position: center;
+}
+
+@media(max-width:1024px) {
+    .center {
+        order: 1;
+        position: relative;
+        height: 100%;
+    }
+    .comments {
+        order: 2;
+        margin-top: 20px;
+        position: relative;
+        height: auto;
+    }
+    .newsfeed {
+        order: 3;
+        margin-top: 20px;
+        position: relative;
+        height: auto;
+        overflow: visible;
+    }
+    .search-wrapper,#map {
+        margin-top: 30px;
+
+    }
+    .mapContainer {
+        height: 65%;
+    }
+}
+
+.searchimg {
+    height: 20px;
+    width: 20px;
+}
+
+.hidden{
+    visibility: hidden;
+    position: absolute;
+}
+
+footer{
+    margin-top: 10px;
+    text-align:center;
+}
